@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+ 
+ {% block title %}
+     Blog - Reset Password
+ {% endblock title %}
+     
+
+{% block content %}
+
+<div class="row col-lg-8 mx-auto mt-5 ">
+    <div class="card mx-auto w-50">
+        <div class="card-body ">
+                        
+            <form action="" method="POST">
+                {{ form.hidden_tag() }}
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors  %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            
+                            {% for error in form.email.errors  %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                                
+                        </div> 
+                    {% else %} 
+                    {{ form.email(class="form-control form-control-lg") }}          
+                    {% endif %}   
+                </div>
+                <div class="form-group mt-2">
+                    {{ form.submit(class="btn btn-info btn-sm")}}
+                </div>
+                
+            </form>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}
+    
