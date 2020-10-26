@@ -10,8 +10,8 @@
     {% include 'nav.html' %}
     
     <div class="container mt-2 " >
-        <div class="row col-log-8 mx-auto ">
-            <div class="mx-auto" >
+        <div class="row">
+            <div class="col-8 col-sm-6 mx-auto" >
                 {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}

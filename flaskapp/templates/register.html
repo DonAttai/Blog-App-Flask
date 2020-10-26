@@ -6,11 +6,15 @@
      
 
 {% block content %}
+<div class="row">
+    <div class="col-8 col-sm-6 mx-auto">
+        <h4>Register</h4>
+    </div>
+</div>
 
-<div class="row mx-auto col-lg-8">
-    <h4 class="col-lg-8 mx-auto">Register</h4>
-    <div class="card w-75 mx-auto">
-        <div class="card-body">
+<div class="row">
+    <div class="col-8 col-sm-6 mx-auto">
+        <div class="card card-body">
             <form action="" method="POST" autocomplete="off">
                 {{ form.hidden_tag() }}
             
@@ -83,12 +87,14 @@
     </div>
     
 </div>
-<div class="row col-lg-8 mt-2">
-        <div class="col-md-1"></div>
+<div class="row">
+    <div class="col-8 col-sm-6 mx-auto">
         <small class="text-muted mx-auto">
             Have An Account Already?
             <a class="ml-1" href="{{ url_for('login')}}">Logn In</a>
-        </small>    
+        </small> 
+    </div>
+        
 </div>
 
 {% endblock content %}
